@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Luxurious+Roman&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+    <style>
+       body{
+            background-color:#2D3047 ;
+        }
+        h1{
+            border-bottom: 3px solid ;
+            color:#93B7BE;
+            padding-bottom: 5px;
+        }
+        h1 a{
+            color:#93B7BE;
+            text-decoration: none;
+            font-size: 70px;
+            font-family: 'Luxurious Roman', cursive;
+            
+        }
+        .site {
+            color: #E0CA3C;
+            font-size: 30px;
+            font-family: 'Nanum Myeongjo', serif;
+            
+            
+        }
+        .site a{
+            color: #E0CA3C;
+            text-decoration: none;
+            
+        }
+        .content{
+            padding-left:20px;
+            
+            
+        }
+        .grid1{
+            display: grid;
+            grid-template-columns: 300px 500px;          
+            margin-top:-30px
+        }
+        h2 a{
+            color: aquamarine;
+            text-decoration: none;
+            font-size: 40px;
+        }
+        .github {
+            color:bisque;
+            font-size: 28px;
+        }
+        .github > li> a{
+            color:rgb(175, 236, 160);
+            font-size: 28px;
+            text-decoration: none;
+            transition: font-size 0.01s linear ;
+        }
+       ul{
+        color: rgb(175, 236, 160);
+           text-decoration: none;
+           font-size: 25px;
+       }
+        ul a{
+           color: rgb(175, 236, 160);
+           text-decoration: none;
+           font-size: 25px;
+           transition: font-size 0.01s linear 
+       }
+       .github > li> a:hover, ul a:hover{
+           font-size: 30px;
+       }
+    </style>
+</head>
+<body>
+    <h1><a href="포트폴리오.html">Limdong Portfolio</a></h1>
+    <div class="grid1">
+        <ol class="site">
+            <li><a href="1.html">Github</a></li>
+            <li><a href="2.html">Naver</a></li>
+        </ol>
+        <div class="content">
+            <h2><a href="https://github.com/donghyeonlim"target="_blank">Github</a></h2>
+            <ol class="github">
+                <li><a href="https://github.com/donghyeonlim/codingtest.git" target="_blank">프로그래머스 코딩테스트</a> </li>
+                <li class="data">데이터 분석</li>
+                    <ul>
+                        <li><a href="https://github.com/donghyeonlim/changwonaccident.git" target="_blank">창원시 교통사고 분석</a></li>
+                    </ul>
+                <li class="AI">엘리스 AI부트캠프</li>
+                    <ul>
+                        <li><a href="https://github.com/donghyeonlim/EliceAIcamp-html.git"target="_blank">html</a></li>
+                    </ul>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
