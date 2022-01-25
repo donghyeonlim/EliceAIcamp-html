@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .panel {
+        width: 600px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .row {
+        display: inline-block;
+        height: 100%;
+        background-color: BurlyWood;
+        display: flex;
+      }
+
+      .col {
+        border: 1px solid black;
+        cursor: pointer;
+        flex: 1;
+        transition: 0.3s;
+      }
+
+      .col:hover {
+        background: rgb(218, 168, 104);
+      }
+
+      .col:active {
+        background: rgb(216, 138, 35);
+      }
+
+      .black {
+        width: 38px;
+        height: 38px;
+        border-radius: 40px;
+        background: black;
+      }
+
+      .white {
+        width: 38px;
+        height: 38px;
+        border-radius: 40px;
+        background: white;
+      }
+    </style>
+    <script>
+
+        function check(map) {
+        map.forEach((v) => {
+          const transRow = v.join("");
+          if (transRow.includes("11111")) {
+            alert("검은돌 승리");
+          } else if (transRow.includes("22222")) {
+            alert("흰돌 승리");
+          }
+        });
+      }
+
+         window.onload = () => {
+          const panel = document.querySelector('.panel')
+          const map =[];
+          let turn = 1;
+
+          // 0: 아무것도 없음 1:흑돌 2:백돌
+          for (let i =0;i<15;i++){
+            map.push([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
+
+          }
+
+
+        for(let i = 0;i<15;i++) {
+        const rowTag = document.createElement("div");
+        rowTag.classList.add("row");
+
+        for (let j = 0; j < 15; j++) {
+          const colTag = document.createElement("div");
+          colTag.classList.add("col");
+
+          colTag.onclick = () => {
+          console.log(i, j, "클릭 !!");
+
+          if (turn === 1) turn = 2;
+          else if (turn === 2) turn = 1;
+
+          map[i][j] = turn;
+
+          if (map[i][j] === 1) {
+              colTag.classList.add("black");
+              } 
+              else if (map[i][j] === 2) {
+                colTag.classList.add("white");
+              }
+          check(map)
+
+        
+          
+
+          
+
+        }
+        rowTag.appendChild(colTag);
+    }
+    panel.appendChild(rowTag);
+}
+
+
+         }
+             </script>
+  </head>
+  <body>
+    <div class="panel"></div>
+  </body>
+</html>

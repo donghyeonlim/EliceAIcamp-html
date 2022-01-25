@@ -1,0 +1,57 @@
+<html>
+    <body>
+        <h1>Array & Object</h1>
+        <script>
+            // 한건 한건의 데이터는 배열에 담습니다
+            let topic = ['html','css','js'];
+            document.write(topic[0]+'<br>');
+            document.write(topic[1]+'<br>');
+            
+            // 하나의 데이터에 대한 속성들의 모임은 객체에 담습니다.
+            let topic1 = {id:1, title:'html',body:'html is ...'}
+            document.write(topic1.id+'<br>');
+            
+
+            let topic2 = {id:2, title:'css',body:'css is ...'}
+            let topics2 = [topic1,topic2];
+            document.write(topics2[0].title+'<br>')
+        </script>
+
+        <h1>function & object</h1>
+        <script>
+        let a = 1;
+        let b = [1,2];
+        // let c = if(1==1){} 조건문은 first citizen이 아님
+        
+        // 함수는 값이 될 수 있음. first citizen
+        let c =function(){
+
+        }
+        </script>
+
+        <h1>function & object</h1>
+        <script>
+            let topics3 = [
+                {id:1,title:'html',body:'html is ...'},
+                {id:2,title:'css',body:'css is ...'}
+            ]
+            function read1(){
+                document.write(topics3[0].title+'=>'+topics3[0].body+'<br>')
+            }
+            read1();
+
+            // 데이터와 함수르 같은 바구니에 담음
+            let topics4 = [
+            {id:1,title:'html',body:'html is ...',read:function(){
+                document.write(this.title+'=>'+this.body+'<br>')
+            }}
+            ]
+            topics4[0].read()
+
+            // built - in
+            document.write(Math.PI+"<br>")
+            
+        </script>
+        
+    </body>
+</html>

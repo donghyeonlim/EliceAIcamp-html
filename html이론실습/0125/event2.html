@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <input type="button" value="hi - inline" onclick="alert(event.target.value)">
+
+        <input type="button" id="ae" value="addEventListener">
+        <script>
+            function clickHandler(evt){
+                alert(evt.target.value)
+            }
+            document.querySelector('#ae').addEventListener('click', clickHandler);
+
+            function clickHandler2(evt){
+                alert(evt.target.value)
+            }
+            document.querySelector('#ae').addEventListener('click', clickHandler2);
+
+
+        </script>
+    </body>
+</html>

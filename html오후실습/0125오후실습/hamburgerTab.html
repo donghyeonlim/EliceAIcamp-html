@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header > ul {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .mobile_tab {
+        cursor: pointer;
+        display: none;
+      }
+
+      .mobile_tab > .bar {
+        width: 20px;
+        border: 2px solid black;
+        margin: 5px;
+      }
+
+      li {
+        cursor: pointer;
+      }
+
+      @media (max-width: 600px) {
+        header > ul {
+          display: none;
+        }
+        .mobile_tab {
+          display: inline-block;
+        }
+
+        .open {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    </style>
+    <script>
+      window.onload = () => {
+        const hamburgerDom = document.querySelector(".mobile_tab");
+        hamburgerDom.addEventListener("click", () => {
+          const ulTag = document.querySelector("header > ul");
+          if (ulTag.className.includes("open")) ulTag.classList.remove("open");
+          else ulTag.classList.add("open");
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="mobile_tab">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <ul class="hi">
+        <li>Home</li>
+        <li>First</li>
+        <li>Second</li>
+        <li>Second</li>
+        <li>Second</li>
+        <li>Second</li>
+        <li>Second</li>
+        <li>Second</li>
+        <li>Second</li>
+      </ul>
+    </header>
+  </body>
+</html>
